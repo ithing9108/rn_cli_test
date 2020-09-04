@@ -23,7 +23,9 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { NavigationContainer } from "@react-navigation/native"; 
 import SplashScreen from 'react-native-splash-screen';
+import Stack from "./navigation/Stack";
 
 const App: () => React$Node = () => {
   
@@ -32,12 +34,22 @@ const App: () => React$Node = () => {
   useEffect(() => {
     setTimeout(() => {
         SplashScreen.hide();
-    }, 1000);
+        console.log("bofore setReady");
+        setIsReady(true);
+    }, 2000); 
   }, [])
   // isReady? SplashScreen.hide() : 
   return (
-    <>
-    </>
+    isReady? (
+      <NavigationContainer>
+        <Stack/>
+      </NavigationContainer>
+
+    ):(
+      <>
+        <Text>Loading...</Text>
+      </>
+    )
   );
 };
 
