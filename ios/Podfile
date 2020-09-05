@@ -8,6 +8,8 @@ target 'rnCliTest' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
+
   target 'rnCliTestTests' do
     inherit! :complete
     # Pods for testing

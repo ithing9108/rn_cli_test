@@ -1,8 +1,8 @@
 import React from "react";
-import Movies from "../screen/Movies"
-import TV from "../screen/TV"
-import Search from "../screen/Search"
-import Fav from "../screen/Fav"
+import Friends from "../screen/Friends"
+import Rooms from "../screen/Rooms"
+import Mail from "../screen/Mail"
+import AppList from "../screen/AppList"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; 
 
 const Tabs = createBottomTabNavigator();
@@ -10,10 +10,10 @@ const Tabs = createBottomTabNavigator();
 export default () => {
     return (
         <Tabs.Navigator>
-            <Tabs.Screen name="Movies" component={Movies}/>
-            <Tabs.Screen name="TV" component={TV}/>
-            <Tabs.Screen name="Search" component={Search}/>
-            <Tabs.Screen name="Fav" component={Fav}/>
+            <Tabs.Screen name="Friend" component={Friends}/>
+            <Tabs.Screen name="Room" component={Rooms}/>
+            <Tabs.Screen name="Mail" component={Mail}/>
+            <Tabs.Screen name="AppList" component={AppList}/>
         </Tabs.Navigator>
     );
 }

@@ -3,7 +3,7 @@ import { View, Text, Button } from "react-native";
 export default ({ navigation }) => {
     return (
         <View>
-            <Text>Search</Text>
+            <Text>AppList</Text>
         </View>
     )
 }
